@@ -23,8 +23,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
         }
         p{
             font-size: 14px;
             font-family: 'Century Gothic', Futara, sans-serif;
+        }
+        #replay{
+            border-radius: 3px;
+            border: none;
+            margin: 20px ;
+            display: block;
+  margin: 20px auto;
         }
