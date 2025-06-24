@@ -1,0 +1,26 @@
+body{
+    padding: 20px;
+}
+.search-form, .result, .input-form{
+    border:  2px solid red;
+    padding:15px;
+    margin-bottom: 20px;
+}
+button{
+    background-color: red;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+}
+table{
+    width: 100%;
+}
+th{
+    background-color: red;
+    color: white;
+    font-size: bold;
+}
+input[type="text"]{
+    width: 60%;
+    border: 1px solid red;
+}

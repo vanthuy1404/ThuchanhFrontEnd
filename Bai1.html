@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danh sách sinh viên</title>
+    <link rel="stylesheet" href="Bai1.css">
     <style>
         tr,table,td, th{
             border: 1px solid black;
@@ -20,7 +21,7 @@
         <form>
             <label for="txtTuKhoa">Tìm kiếm</label>
             <input type="text" placeholder="Từ khóa cần tìm" required>
-            <button type="submit">Tìm kiếm</button>
+            <button type="submit" class="btnTimkiem">Tìm kiếm</button>
         </form>
     </div>
     <div class="result" style="margin-top: 10px;">
@@ -64,9 +65,11 @@
     </div>
 
     <div class="input-form" style="margin-top: 10px;">
-        <button type="button">Thêm mới</button>
-        <button type="button">Cập nhật</button>
-        <button type="button">Xóa</button>
+        <div class="btn-row">
+            <button type="button">Thêm mới</button>
+            <button type="button">Cập nhật</button>
+            <button type="button">Xóa</button>
+        </div>
         <div class="input-row">
             <label for="txtMaSV">Mã sinh viên<span style="color: red;">*</span></label>
             <input type="text" id="txtMaSV" name="txtMaSV" required>
