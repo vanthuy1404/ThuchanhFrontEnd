@@ -13,16 +13,17 @@
         .input-row{
             margin-top: 5px;
         }
-    </style>
+    </style> 
 </head>
 <body>
     <h1 style="width: 100%; text-align: center;">Danh sách sinh viên</h1>
     <div class="search-form">
         <form>
             <label for="txtTuKhoa">Tìm kiếm</label>
-            <input type="text" placeholder="Từ khóa cần tìm" required>
-            <button type="submit" class="btnTimkiem">Tìm kiếm</button>
+            <input type="text" placeholder="Từ khóa cần tìm" required id="txtTuKhoa" name="txtTuKhoa">
+            <button type="submit" id="btnTimkiem">Tìm kiếm</button>
         </form>
+        <div id="search-result" style="margin-top: 10px;"> </div>
     </div>
     <div class="result" style="margin-top: 10px;">
         <table>
@@ -37,7 +38,7 @@
                     <th>Thao tác</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tbDanhSach">
                 <tr>
                     <td><input type="checkbox" name="" id=""></td>
                     <td>123</td>
@@ -66,9 +67,9 @@
 
     <div class="input-form" style="margin-top: 10px;">
         <div class="btn-row">
-            <button type="button">Thêm mới</button>
-            <button type="button">Cập nhật</button>
-            <button type="button">Xóa</button>
+            <button type="button" id="btnAdd">Thêm mới</button>
+            <button type="button" id="btnUpdate">Cập nhật</button>
+            <button type="button" id="btnDelete">Xóa</button>
         </div>
         <div class="input-row">
             <label for="txtMaSV">Mã sinh viên<span style="color: red;">*</span></label>
@@ -85,11 +86,11 @@
         <div class="input-row">
             <div class="input-row">
             <label for="rbdGioitinh">Giới tính<span style="color: red;">*</span></label>
-            <input type="radio" id="rbNam" name="rbdGioitinh" value="Nam">
-            <label for="rbNam">Nam<span></span></label>
+            <input type="radio" id="rbNam" name="rdbGioiTinh" value="Nam" checked>
+            <span>Nam</span>
+            <input type="radio" id="rbNu" name="rdbGioiTinh" value="Nữ">
+            <span>Nữ</span>
 
-            <input type="radio" id="rbNu" name="rbdGioitinh" value = "Nữ">
-            <label for="rbNu">Nữ<span style="color: red;"></span></label>
 
         </div>
         </div>
@@ -104,5 +105,6 @@
         </div>
         <div class="input-row"></div>
     </div>
+    <script src="Bai1.js"></script>
 </body>
 </html>
