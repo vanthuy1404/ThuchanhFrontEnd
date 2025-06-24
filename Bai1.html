@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách sinh viên</title>
+    <style>
+        tr,table,td, th{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .input-row{
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="width: 100%; text-align: center;">Danh sách sinh viên</h1>
+    <div class="search-form">
+        <form>
+            <label for="txtTuKhoa">Tìm kiếm</label>
+            <input type="text" placeholder="Từ khóa cần tìm" required>
+            <button type="submit">Tìm kiếm</button>
+        </form>
+    </div>
+    <div class="result" style="margin-top: 10px;">
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Mã sinh viên</th>
+                    <th>Tên sinh viên</th>
+                    <th>Ngày sinh</th>
+                    <th>Giới tính</th>
+                    <th>Khoa</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>123</td>
+                    <td>Lương Chí Dũng</td>
+                    <td>20/8/1985</td>
+                    <td>Nam</td>
+                    <td>CNTT</td>
+                    <td><a href="#">Sửa</a>
+                        <a href="#">Xóa</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>123</td>
+                    <td>Phục Long</td>
+                    <td>20/8/1980</td>
+                    <td>Nam</td>
+                    <td>Bia</td>
+                    <td><a href="#">Sửa</a>
+                        <a href="#">Xóa</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="input-form" style="margin-top: 10px;">
+        <button type="button">Thêm mới</button>
+        <button type="button">Cập nhật</button>
+        <button type="button">Xóa</button>
+        <div class="input-row">
+            <label for="txtMaSV">Mã sinh viên<span style="color: red;">*</span></label>
+            <input type="text" id="txtMaSV" name="txtMaSV" required>
+        </div>
+        <div class="input-row">
+            <label for="txtTenSV">Tên sinh viên<span style="color: red;">*</span></label>
+            <input type="text" id="txtTenSV" name="txtTenSV"required>
+        </div>
+        <div class="input-row">
+            <label for="txtNgaySinh">Ngày sinh<span style="color: red;">*</span></label>
+            <input type="date" id="txtNgaySinh" name="txtNgaySinh" >
+        </div>
+        <div class="input-row">
+            <div class="input-row">
+            <label for="rbdGioitinh">Giới tính<span style="color: red;">*</span></label>
+            <input type="radio" id="rbNam" name="rbdGioitinh" value="Nam">
+            <label for="rbNam">Nam<span></span></label>
+
+            <input type="radio" id="rbNu" name="rbdGioitinh" value = "Nữ">
+            <label for="rbNu">Nữ<span style="color: red;"></span></label>
+
+        </div>
+        </div>
+        <div class="input-row">
+            <label for="drpKhoa">Khoa <spans style="color: red;">*</span></label>
+            <select name="drpKhoa" id="drpKhoa" required>
+                <option value="CNTT">CNTT</option>
+                <option value="Toán">Toán</option>
+                <option value="Văn">Văn</option>
+                <option value="Tiếng anh">Tiếng anh</option>
+            </select>
+        </div>
+        <div class="input-row"></div>
+    </div>
+</body>
+</html>
