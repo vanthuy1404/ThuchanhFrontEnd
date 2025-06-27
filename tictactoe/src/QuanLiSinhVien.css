@@ -1,0 +1,71 @@
+.search-form{
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-form input[type="text"] {
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.search-form button, button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.table-student{
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.table-student table {
+    width: 100%;
+}
+table th, td, tr {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+td a{
+    color: #007bff;
+    text-decoration: none;
+    margin: 5px;
+}
+.btn-group{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+.form-input input[type="text"], input[type ="date"] {
+    display: block;
+    width: 60%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+}
+.radio-group {
+    display: flex;
+    justify-content: center;  /* căn giữa ngang */
+    align-items: center;      /* căn giữa dọc */
+    gap: 20px;                /* khoảng cách giữa 2 radio */
+    margin: 10px auto;
+    width: 60%;
+}
+
+select{
+    width: 60%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    display: block;
+}

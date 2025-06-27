@@ -4,13 +4,15 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Button from './component/Button'
 import TicTacToe from './TicTacToe'
+import QuanLiSinhVien from './QuanLiSinhVien'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <TicTacToe/>
+    <QuanLiSinhVien/>
+      {/* <TicTacToe/> */}
       {/**<Button content = "Replay"></Button> */}
     </>
   )
