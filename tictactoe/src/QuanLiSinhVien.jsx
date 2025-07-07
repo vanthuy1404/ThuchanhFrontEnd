@@ -48,6 +48,12 @@ function QuanLiSinhVien() {
         document.getElementById('txtNgaySinh').value = '';
         document.querySelector('input[name="rdbGioiTinh"][value="Nam"]').checked = true;
         document.getElementById('drpKhoa').value = '';  
+        setMaSV('');
+        setTenSV('');
+        setNgaySinh('');
+        setGioiTinh('Nam');
+        setMaKhoa('');
+        setDsMASV([]);
     }
     const handleTimKiem = ()=>{
         const ketQua = timKiemSinhVien(keyword);
@@ -104,18 +110,15 @@ function QuanLiSinhVien() {
         alert("SÓA thành công :)))");
     }  ;     
     function fillInput(MASV){
-        const sv = dsSinhVien.find(sv => sv.MaSV = MASV);
+        const sv = dsSinhVien.find(sv => sv.MaSV === MASV);
         if(sv){
-            document.getElementById('txtMaSV').value = sv.MaSV;
-            document.getElementById('txtTenSV').value = sv.TenSV;
-            document.getElementById('txtNgaySinh').value = sv.NgaySinh;
-            document.querySelector(`input[name="rdbGioiTinh"][value="${sv.GioiTinh}"]`).checked = true;
-            document.getElementById('drpKhoa').value = sv.MaKhoa;
             setMaSV(sv.MaSV);
             setTenSV(sv.TenSV);
             setNgaySinh(sv.NgaySinh);
             setGioiTinh(sv.GioiTinh);
             setMaKhoa(sv.MaKhoa);
+            
+            
             
         }
         else {
@@ -175,14 +178,18 @@ function QuanLiSinhVien() {
 
             </div>
             <div className="form-input">
-                <input type="text" id="txtMaSV" placeholder="Mã SV" onChange={(e)=>setMaSV(e.target.value)}/>
-                <input type="text" id="txtTenSV" placeholder="Tên SV" onChange={(e)=>setTenSV(e.target.value)}/>
-                <input type="date" id="txtNgaySinh" placeholder="Ngày Sinh" onChange={(e)=>setNgaySinh(e.target.value)}/>
+                <input type="text" id="txtMaSV" placeholder="Mã SV" value={maSV} onChange={(e)=>setMaSV(e.target.value)}/>
+                <input type="text" id="txtTenSV" placeholder="Tên SV" value={tenSV} onChange={(e)=>setTenSV(e.target.value)}/>
+                <input type="date" id="txtNgaySinh" placeholder="Ngày Sinh" value={ngaySinh} onChange={(e)=>setNgaySinh(e.target.value)}/>
                 <div className="radio-group">
-                    <label><input type="radio" name="rdbGioiTinh" value="Nam" defaultChecked onChange={(e)=>setGioiTinh(e.target.value)}/> Nam</label>
-                    <label><input type="radio" name="rdbGioiTinh" value="Nữ" onChange={(e)=>setGioiTinh(e.target.value)}/> Nữ</label>
+                    <label>
+                        <input type="radio" name="rdbGioiTinh" value="Nam" checked={gioiTinh === "Nam"} onChange={(e)=>setGioiTinh(e.target.value)}/> Nam
+                    </label>
+                    <label>
+                        <input type="radio" name="rdbGioiTinh" value="Nữ" checked={gioiTinh === "Nữ"} onChange={(e)=>setGioiTinh(e.target.value)}/> Nữ
+                    </label>
                 </div>
-                <select id="drpKhoa" onChange={(e)=>setMaKhoa(e.target.value)}>
+                <select id="drpKhoa" value={maKhoa} onChange={(e)=>setMaKhoa(e.target.value)}>
                     <option value="">Chọn Khoa</option>
                     <option value="CNTT">Công Nghệ Thông Tin</option>
                     <option value="KTPM">Kỹ Thuật Phần Mềm</option>
